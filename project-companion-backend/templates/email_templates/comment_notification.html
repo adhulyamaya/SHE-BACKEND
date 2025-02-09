@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to Wompact</title>
+		<style>
+            
+            html,body{
+                padding:0;
+                margin:0;
+            }
+            a{
+                text-decoration: none;
+            }
+            #main{
+                width:600px;
+                margin:0 auto;	
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                border-top: 3px solid #0B3F7A;
+            }
+            #top{
+                background: url(https://www.wompact.com/static/web/images/spotlight-bg.jpg);
+                background-color:#388ac0;
+                background-size:cover;
+            }
+            br.clear{
+                clear:both;
+            }
+            #header{
+                background: url(https://www.wompact.com/static/web/images/tr.png) repeat-x bottom left;
+                padding:20px 0 30px;
+            }
+            #header h1{
+                display: inline-block;
+                padding:0;
+                margin:0;
+                text-align: left;
+            }
+            #header h1 img{
+                width:100%;
+                height:auto;
+            }
+            #header div.right{
+                display: inline-block;	
+                margin-top: 30px;
+            }
+            #header .social a{
+                float: right;
+                margin-left: 8px;
+            }
+            #header a.website{
+                float: right;
+                color:#fff;
+                margin-top: 8px;
+            }
+            .center{
+                width:90%;
+                padding:0 5%;
+            }
+            #spotlight{
+                color: #fff;
+                padding:30px;
+                text-align: center;
+            }
+            #spotlight h2{
+                font-size: 22px;
+                font-weight: normal;
+            }
+            #spotlight h2 b{
+                font-size: 30px;
+                display: block;
+                margin-bottom: 15px;
+            }
+            p{
+                line-height: 1.6em;	
+            }
+            #content{
+                border-left: 1px solid #eee;
+                border-right: 1px solid #eee;
+                padding:20px 0;
+            }
+            .contentInner{
+                width:90%;
+                padding:0 5%;
+            }
+            #content .bottom p{	
+                margin:0;
+            }
+            #footer{
+                background: #f6f6f6;
+                color: #aaa;
+                padding:5%;
+                text-align: center;
+            }
+            #footer a{
+                color:#4683ea;
+            }
+            #footer p{
+                margin:0;
+                font-size: 12px;
+            }
+            .td35{
+                width:35%;
+            }
+            .td65{
+                text-align: right;
+                width:65%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="top">
+				<div id="spotlight">
+					<h2>
+						<b>Wompact</b>
+						<span></span>
+					</h2>
+				</div>
+			</div>
+            <div id="content">
+				<div class="contentInner">
+                    <h2>Welcome To Wompact !</h2>
+                    <p>Hi {{ companion_username }},</p>
+                    <p>
+                        <strong>{{ comment_added_by }}</strong> has added a new comment on the project <strong>{{ project.name }}</strong>.
+                    </p>
+                    <p><em>"{{ comment }}"</em></p>
+                    <p>You can log in to the platform to view more details and respond if needed.</p>
+                    <a href="{{ project_url }}" class="button">View Project</a>
+                    
+                    <p>Please feel free to contact us for further clarification.</p> 
+                    <p>Sincerely,<br>
+                        Wompact<br>
+                        <a href="https://www.wompact.com/">https://www.wompact.com/</a><br>
+                        <a href="https://www.wompact.com/">https://www.wompact.com/</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <div id="footer">
+				{% if not not_automated %}
+					<p>This is an automatically generated email, please do not reply to this message.</p>
+				{% endif %}
+				<p>Please feel free to contact us.<br> should you have any questions or concerns regarding <a href="https://www.wompact.com/">www.wompact.com ? <br></a> or your email subscription at <a href="mailto:projectcompanionapp@gmail.com">projectcompanionapp@gmail.com</a>.</p>
+				<p>This email was sent by <a href="mailto:projectcompanionapp@gmail.com" >projectcompanionapp@gmail.com</a></p>
+			</div>
+        </div>
+    </body>
+</html>
