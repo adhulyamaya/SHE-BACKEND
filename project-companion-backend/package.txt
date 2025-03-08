@@ -1,0 +1,88 @@
+📌 Core Django Packages
+------------------------------
+Django==4.2.1 → The main Django framework for building web applications.
+djangorestframework==3.15.1 → Django REST Framework (DRF) for building APIs.
+djangorestframework-simplejwt==5.3.1 → JWT authentication support for DRF.
+django-cors-headers==4.3.1 → Enables Cross-Origin Resource Sharing (CORS) in Django.
+django-timezone-field==6.1.0 → Helps handle time zones in Django models.
+django-storages==1.13.2 → Allows Django to work with cloud storage (e.g., AWS S3).
+
+
+📌 Celery & Task Scheduling
+------------------------------
+celery==5.2.7 → Asynchronous task queue for running background jobs.
+django-celery-beat==2.5.0 → Periodic task scheduling for Celery (like a cron job).
+django-celery-results==2.5.1 → Stores Celery task results in the database.
+redis==4.5.5 → Message broker for Celery (alternative to RabbitMQ).
+kombu==5.3.7 → Celery’s messaging library to work with brokers like Redis/RabbitMQ.
+billiard==3.6.4.0 → Provides multiprocessing support for Celery.
+vine==5.1.0 → Utility library used internally by Celery.
+
+
+📌 Databases & ORM
+-----------------------------------------
+psycopg2-binary==2.9.6 → PostgreSQL database adapter for Python & Django.
+sqlparse==0.5.0 → SQL parsing tool used by Django ORM.
+
+📌 Authentication & Security
+-----------------------------------------
+PyJWT==2.8.0 → Handles JSON Web Tokens (JWT) for authentication.
+python-decouple==3.8 → Helps manage environment variables securely.
+
+📌 Background Jobs & Cron Jobs
+-----------------------------------------
+python-crontab==3.0.0 → Used for managing cron jobs in Python.
+cron-descriptor==1.4.3 → Provides human-readable descriptions for cron jobs.
+
+📌 Web & API Requests
+-----------------------------------------
+requests==2.32.3 → Python library for making HTTP requests (used in API calls).
+urllib3==1.26.18 → Advanced HTTP client for handling network requests.
+idna==3.10 → Internationalized Domain Name support for requests.
+charset-normalizer==3.4.0 → Character encoding detection (used in requests).
+certifi==2024.8.30 → Provides SSL certificates for secure HTTP requests.
+
+📌 Cloud & Payment Gateways
+-----------------------------------------
+boto3==1.26.135 → AWS SDK for Python (used for S3, EC2, DynamoDB, etc.).
+botocore==1.29.135 → Low-level core library used by boto3.
+s3transfer==0.6.2 → Manages AWS S3 file transfers for boto3.
+stripe==11.1.1 → Stripe payment gateway integration.
+razorpay==1.4.2 → Razorpay payment gateway integration (popular in India).
+
+📌 AMQP Messaging (Alternative to Redis)
+-----------------------------------------
+amqp==5.2.0 → Advanced Message Queuing Protocol (AMQP) for RabbitMQ.
+
+📌 Utility Libraries
+-----------------------------------------
+asgiref==3.8.1 → Helps Django support ASGI (for async requests & WebSockets).
+pytz==2024.1 → Time zone library for Python.
+tzdata==2024.1 → Time zone database updates.
+typing_extensions==4.11.0 → Provides typing support for compatibility across Python versions.
+
+📌 CLI & Interactive Tools
+-----------------------------------------
+click==8.1.7 → CLI utility for building command-line interfaces.
+click-didyoumean==0.3.1 → Provides "Did you mean?" suggestions in CLI.
+click-plugins==1.1.1 → Plugin system for Click.
+click-repl==0.3.0 → Interactive Read-Eval-Print-Loop (REPL) for Click.
+colorama==0.4.6 → Enables colored terminal output (for Windows support).
+prompt-toolkit==3.0.43 → Library for building interactive CLI applications.
+wcwidth==0.2.13 → Determines the printable width of characters in CLI.
+
+📌 Image Processing
+-----------------------------------------
+pillow==10.3.0 → Handles image processing in Django (for handling uploads).
+
+
+
+_____________________________________________________
+🎯 Summary
+______________________________________________________
+Django & DRF → Web framework + API handling.
+Celery & Redis → Background tasks + scheduled jobs.
+PostgreSQL Support → Database management.
+Payments → Stripe & Razorpay integrations.
+AWS (S3, etc.) → Cloud storage handling.
+CLI Tools → For better developer experience.
